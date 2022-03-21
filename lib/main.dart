@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
     ); */
     //---------------CupertinoApp END--------------------
     return MaterialApp(
-      // Arabic RTL config START
+      // Arabic RTL config START ss
       localizationsDelegates: const [
         GlobalCupertinoLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
