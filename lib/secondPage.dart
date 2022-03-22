@@ -55,6 +55,12 @@ class _SecondRouteState extends State<SecondRoute> {
   ];
 
   var listWidget = <Widget>[
+    const ListTile(
+      leading: Icon(Icons.abc_outlined),
+      title: Text("ListTile title"),
+      subtitle: Text("ListTile subtitle"),
+      trailing: Icon(Icons.abc_outlined),
+    ),
     Container(
       height: 50,
       color: Colors.amber[600],

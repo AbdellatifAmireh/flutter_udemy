@@ -1,3 +1,5 @@
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -14,10 +16,7 @@ import 'myDrawer.dart';
 import 'text_scaffold_key.dart';
 //import 'package:flutter/cupertino.dart';
 
-void main() {
-  //debugPaintSizeEnabled=true;
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -156,7 +155,73 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             //_widgetOptions.elementAt(_selectedIndex),
             ElevatedButton(
-              child: const Text('Open route'),
+              child: const Text('صحيفة الخليج',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Almarai',
+                    fontWeight: FontWeight.w900,
+                  )),
+              onPressed: () {
+                //Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SecondRoute()),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text('صحيفة الخليج',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Almarai',
+                    fontWeight: FontWeight.w200,
+                    fontStyle: FontStyle.italic,
+                    //letterSpacing: 88,
+                    //wordSpacing: 88,
+                  )),
+              onPressed: () {
+                //Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SecondRoute()),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text('صحيفة الخليج',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Almarai',
+                  )),
+              onPressed: () {
+                //Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SecondRoute()),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("ddddd"),
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text("sdffasf"),
+                      );
+                    });
+              },
+            ),
+            Icon(
+              Icons.add_business,
+            ),
+            ElevatedButton(
+              child: const Text('صحيفة الخليج',
+                  style: TextStyle(
+                    fontSize: 20,
+                    //fontFamily: 'Almarai',
+                  )),
               onPressed: () {
                 //Navigator.pop(context);
                 Navigator.push(
@@ -259,22 +324,26 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Expanded(
-                  child: Image.network(
-                    "https://dummyimage.com/600x400/000/fff",
+                  child: Image.asset(
+                    "images/dummy.png",
                     //width: 100,
                   ),
                 ),
                 Expanded(
                   flex: 2,
-                  child: Image.network(
+                  child: Image.asset(
+                    "images/dummy.png",
+                    //width: 100,
+                  ),
+                  /* child: Image.network(
                     "https://dummyimage.com/600x400/000/fff",
                     //width: 300,
-                  ),
+                  ), */
                 ),
                 Expanded(
-                  child: Image.network(
-                    "https://dummyimage.com/600x400/000/fff",
-                    //width: 300,
+                  child: Image.asset(
+                    "images/dummy.png",
+                    //width: 100,
                   ),
                 ),
               ],
