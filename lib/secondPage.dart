@@ -107,6 +107,9 @@ class _SecondRouteState extends State<SecondRoute> {
       child: const Center(child: Text('Entry C')),
     ),
   ];
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -117,41 +120,78 @@ class _SecondRouteState extends State<SecondRoute> {
         selectedIndex: selectedIndex,
         onClicked: onClicked,
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: RefreshIndicator(
-              color: Colors.yellow,
-              backgroundColor: Colors.red,
-              onRefresh: _refreshLocalGallery,
-              child: ListView(
-                padding: const EdgeInsets.all(8),
-                children: <Widget>[
-                  for (var item in listWidget) item,
-                  //listWidget.forEach((element) => element),
-                ],
+      body: Container(
+        child: Column(
+          children: [
+            Expanded(
+              child: RefreshIndicator(
+                color: Colors.yellow,
+                backgroundColor: Colors.red,
+                onRefresh: _refreshLocalGallery,
+                child: ListView(
+                  padding: const EdgeInsets.all(8),
+                  children: <Widget>[
+                    for (var item in listWidget) item,
+                    //listWidget.forEach((element) => element),
+                  ],
+                ),
               ),
             ),
-          ),
-          Container(
-            child: Hero(
-              tag: 'test123',
-              child: Image.asset(
-                'images/lake.jpg',
-                fit: BoxFit.cover,
+            Container(
+              child: Hero(
+                tag: 'test123',
+                child: Image.asset(
+                  'images/lake.jpg',
+                  fit: BoxFit.cover,
+                ),
               ),
+              margin: const EdgeInsets.only(bottom: 10, top: 10),
+              //margin: const EdgeInsets.all(10.0),
             ),
-            margin: const EdgeInsets.only(bottom: 10, top: 10),
-            //margin: const EdgeInsets.all(10.0),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              // Navigate back to first route when tapped.
-              Navigator.pop(context);
-            },
-            child: const Text('Go back!'),
-          ),
-        ],
+            ElevatedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Navigate back to first route when tapped.
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!'),
+            ),
+          ],
+        ),
       ),
     );
   }

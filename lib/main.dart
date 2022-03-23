@@ -7,6 +7,7 @@ import 'package:flutter_udemy/secondPage.dart';
 import 'package:flutter_udemy/sliderAdaptive.dart';
 import 'package:flutter_udemy/switchAdaptive.dart';
 import 'package:flutter_udemy/switchListTile.dart';
+import 'package:flutter_udemy/third_page.dart';
 
 import 'imagesClass.dart';
 import 'listImg.dart';
@@ -153,6 +154,21 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            ElevatedButton(
+              child: const Text('صحيفة الخليج',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Almarai',
+                    fontWeight: FontWeight.w900,
+                  )),
+              onPressed: () {
+                //Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ThirdPage()),
+                );
+              },
+            ),
             //_widgetOptions.elementAt(_selectedIndex),
             ElevatedButton(
               child: const Text('صحيفة الخليج',
